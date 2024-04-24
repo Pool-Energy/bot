@@ -54,7 +54,7 @@ def main():
     intents.message_content = True
     client = ChiaBotClient(plugins=plugins, intents=intents)
 
-    client.run(config['token'])
+    client.run(config['discord']['token'])
 
 
 if __name__ == '__main__':

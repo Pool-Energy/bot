@@ -6,12 +6,12 @@ import logging
 
 from chiabot.plugin import PluginBase
 
-logger = logging.getLogger('openchia_stats')
+logger = logging.getLogger('pool_stats')
 
 
-class OpenChiaStats(PluginBase):
+class PoolStats(PluginBase):
 
-    NAME = 'openchia_stats'
+    NAME = 'pool_stats'
 
     async def on_ready(self, client):
         asyncio.ensure_future(self.loop(client))
@@ -22,15 +22,15 @@ class OpenChiaStats(PluginBase):
                 await self.get_stats(client, i)
             except Exception:
                 logger.error('Exception getting stats', exc_info=True)
-            await asyncio.sleep(self.config['openchia_stats']['interval'])
+            await asyncio.sleep(self.config['pool_stats']['interval'])
 
     async def get_stats(self, client, i):
-        async with aiohttp.request('GET', 'https://openchia.io/api/v1.0/stats') as r:
+        async with aiohttp.request('GET', self.config['pool_stats']['endpoint']) as r:
             if r.status != 200:
                 return
             stats = await r.json()
 
-            guild = await client.fetch_guild(865233670938689537)
+            guild = await client.fetch_guild(self.config['discord']['guild'])
             me = await guild.fetch_member(client.user.id)
 
             i = i % 7

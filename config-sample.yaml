@@ -1,11 +1,7 @@
-token: XXXX
-openchia_stats:
+pool_stats:
   interval: 30
-faucet:
-  mojos: 100
-  wallet_fingerprint: 2756312777
-  wallet_id: 1
-  time_target: 86400
-  transactions_per_time_target: 100
-  addresses_time_target: 86400
-  channel_id: 874461341602172949
+  endpoint: https://pool.energy/api/v1.0/stats
+
+discord:
+  token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  guild: 123456789012345678
