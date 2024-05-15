@@ -23,6 +23,6 @@ RUN ./venv/bin/pip install -r requirements.txt
 
 COPY ./chiabot /root/bot/chiabot/
 
-COPY ./docker/start.sh /root/
+COPY ./docker/entrypoint.sh /
 
-CMD ["bash", "/root/start.sh"]
+CMD ["bash", "/entrypoint.sh"]
