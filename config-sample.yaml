@@ -1,7 +1,13 @@
+global:
+  baseapi: 'https://pool.energy/api/v1.0'
+
 pool_stats:
   interval: 30
-  endpoint: https://pool.energy/api/v1.0/stats
 
 discord:
-  token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  guild: 123456789012345678
+  token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  guild: '123456789012345678'
+
+pool_actions:
+  channel: '123456789012345678'
+  webhook: 'https://discord.com/api/webhooks/123456789012345678/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
