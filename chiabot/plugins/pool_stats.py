@@ -25,7 +25,7 @@ class PoolStats(PluginBase):
             await asyncio.sleep(self.config['pool_stats']['interval'])
 
     async def get_stats(self, client, i):
-        async with aiohttp.request('GET', self.config['pool_stats']['endpoint']) as r:
+        async with aiohttp.request('GET', f"{self.config['global']['baseapi']}/stats") as r:
             if r.status != 200:
                 return
             stats = await r.json()
