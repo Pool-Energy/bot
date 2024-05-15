@@ -1,5 +1,5 @@
 git+https://${GITHUB_TOKEN}@github.com/pool-energy/chia-blockchain.git@stable/2.1#egg=chia-blockchain
-aiohttp==3.9.5
+aiohttp==3.9.1
 attrs==23.2.0
 colorlog==6.8.2
 discord.py==2.3.2
