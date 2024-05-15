@@ -49,7 +49,7 @@ class Plugins(object):
                 if self.includes is None or attr.NAME in self.includes:
                     plugins.append(attr(self.config))
 
-                break  # Only one plugin per file
+                break
         return plugins
 
     async def exec_plugin(self, client, name, args=None, kwargs=None):
