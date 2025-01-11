@@ -1,6 +1,6 @@
-git+https://${GITHUB_TOKEN}@github.com/pool-energy/chia-blockchain.git@stable/2.4
-aiohttp==3.9.4
-attrs==24.2.0
+git+https://${GITHUB_TOKEN}@github.com/pool-energy/chia-blockchain.git@stable/2.5
+aiohttp==3.10.4
+attrs==24.3.0
 colorlog==6.8.2
 discord.py==2.4.0
 humanize==4.11.0
