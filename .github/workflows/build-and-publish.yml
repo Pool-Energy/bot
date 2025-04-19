@@ -7,10 +7,21 @@ name: Build and Publish
 
 on:
   push:
-    branches: ['main', 'stable/*', 'feature/*', 'bugfix/*', 'hotfix/*']
-    tags: [ 'v*.*.*' ]
+    branches:
+      - 'main'
+      - 'stable/*'
+      - 'feature/*'
+      - 'bugfix/*'
+      - 'hotfix/*'
+    tags:
+      - 'v*.*.*'
   pull_request:
-    branches: ['main', 'stable/*', 'feature/*', 'bugfix/*', 'hotfix/*']
+    branches:
+      - 'main'
+      - 'stable/*'
+      - 'feature/*'
+      - 'bugfix/*'
+      - 'hotfix/*'
 
 env:
   REGISTRY_URL: ghcr.io
