@@ -33,6 +33,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -72,16 +73,14 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
-      - name: Sign image
+      - name: Sign images
         if: ${{ github.event_name != 'pull_request' }}
         run: |
           images=""
           for tag in ${TAGS}; do
             images+="${tag}@${DIGEST} "
           done
-          cosign sign --yes --key env://${COSIGN_PRIVATE_KEY} ${images}
+          cosign sign --yes ${images}
         env:
           TAGS: ${{ steps.metadata.outputs.tags}}
           DIGEST: ${{ steps.build-and-publish.outputs.digest }}
-          COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
-          COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
