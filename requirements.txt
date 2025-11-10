@@ -7,4 +7,4 @@ discord.py==2.6.4
 idna==3.10
 multidict==6.7.0
 PyYAML==6.0.3
-cachetools==6.2.0
+cachetools==6.2.1
