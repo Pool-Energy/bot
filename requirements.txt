@@ -1,10 +1,10 @@
-git+https://github.com/pool-energy/chia-blockchain.git@release/2.5.7#egg=chia-blockchain
-aiohttp==3.13.2
+git+https://github.com/pool-energy/chia-blockchain.git@release/2.6.0#egg=chia-blockchain
+aiohttp==3.13.3
 attrs==25.4.0
-colorlog==6.9.0
-humanize==4.13.0
+colorlog==6.10.1
+humanize==4.15.0
 discord.py==2.6.4
-idna==3.10
-multidict==6.7.0
+idna==3.11
+multidict==6.7.1
 PyYAML==6.0.3
-cachetools==6.2.0
+cachetools==7.0.1
