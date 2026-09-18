@@ -1,5 +1,5 @@
-git+https://github.com/pool-energy/chia-blockchain.git@release/2.7.0#egg=chia-blockchain
-aiohttp==3.13.3
+git+https://github.com/pool-energy/chia-blockchain.git@release/2.7.4#egg=chia-blockchain
+aiohttp>=3.14.0
 attrs==26.1.0
 colorlog==6.10.1
 humanize==4.15.0
