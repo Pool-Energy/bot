@@ -2,7 +2,7 @@ git+https://github.com/pool-energy/chia-blockchain.git@release/2.7.4#egg=chia-bl
 aiohttp>=3.14.0
 attrs==26.1.0
 colorlog==6.12.0
-humanize==4.15.0
+humanize==4.16.0
 discord.py==2.7.1
 idna==3.11
 multidict==6.7.1
